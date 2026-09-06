@@ -1,0 +1,232 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Webpage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        header {
+            background-color: #333;
+            color: white;
+
+            padding: 20px;
+
+            /* Flexbox */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            flex: 1;
+
+            /* Grid */
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            gap: 20px;
+            padding: 30px;
+        }
+
+        article {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        /* Animated Title */
+        article h1 {
+            animation: moveUp 1s ease-in;
+        }
+
+        /* Three Boxes using Flexbox */
+        .boxes {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .box {
+            flex: 1;
+
+            min-height: 150px;
+
+            background-color: #ddd;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+        }
+
+
+        aside {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+      
+
+        footer {
+            background-color: #333;
+            color: white;
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+    
+
+        @keyframes moveUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+      
+
+        @media (max-width: 700px) {
+
+            /* Header becomes vertical */
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            /* Main becomes one column */
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            /* Three boxes become vertical */
+            .boxes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            My Website
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- ARTICLE -->
+        <article>
+
+            <h1>Welcome to My Website</h1>
+
+            <p>
+                This is the main article section of the webpage.
+                Here you can add your content, information and
+                other important details.
+            </p>
+
+            <!-- Three Flexbox Boxes -->
+            <div class="boxes">
+
+                <div class="box">
+                    Box 1
+                </div>
+
+                <div class="box">
+                    Box 2
+                </div>
+
+                <div class="box">
+                    Box 3
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SIDEBAR -->
+        <aside>
+
+            <h2>Sidebar</h2>
+
+            <p>
+                This is the sidebar section. You can add
+                recent posts, categories, links or other
+                useful information here.
+            </p>
+
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © 2026 My Website. All Rights Reserved.
+
+    </footer>
+
+</body>
+</html>
+```

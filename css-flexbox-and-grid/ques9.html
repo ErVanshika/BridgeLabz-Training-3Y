@@ -1,0 +1,141 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Flip Animation</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+
+            /* Center card on screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #f2f2f2;
+        }
+
+        /* Card container */
+        .card-container {
+            width: 300px;
+            height: 400px;
+
+            /* 3D perspective */
+            perspective: 1000px;
+        }
+
+        /* Card */
+        .card {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+
+            /* Enable 3D */
+            transform-style: preserve-3d;
+
+            /* Smooth flip */
+            transition: transform 0.8s;
+        }
+
+        /* Flip on hover */
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and Back */
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+
+            backface-visibility: hidden;
+
+            border-radius: 10px;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Front side */
+        .front {
+            background-color: white;
+        }
+
+        .front img {
+            width: 200px;
+            height: 200px;
+
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .front h2 {
+            margin-top: 20px;
+        }
+
+        /* Back side */
+        .back {
+            background-color: #333;
+            color: white;
+
+            transform: rotateY(180deg);
+        }
+
+        .back p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <!-- Front Side -->
+            <div class="front">
+
+                <img src="https://picsum.photos/200"
+                     alt="Nature Image">
+
+                <h2>Nature Explorer</h2>
+
+            </div>
+
+            <!-- Back Side -->
+            <div class="back">
+
+                <h2>About Nature</h2>
+
+                <p>
+                    Nature provides beautiful landscapes,
+                    fresh air and a peaceful environment.
+                    Exploring nature can be a wonderful experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

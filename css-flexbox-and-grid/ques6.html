@@ -1,0 +1,225 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Main Grid Layout */
+        .blog-container {
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            grid-template-rows: auto 1fr auto;
+
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+
+            background-color: #333;
+            color: white;
+
+            padding: 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Sidebar */
+        aside {
+            grid-area: sidebar;
+
+            background-color: white;
+            padding: 20px;
+
+            border-radius: 8px;
+        }
+
+        aside h2 {
+            margin-top: 0;
+        }
+
+        aside ul {
+            padding-left: 20px;
+        }
+
+        aside li {
+            margin: 15px 0;
+        }
+
+        /* Main Content */
+        main {
+            grid-area: main;
+
+            display: grid;
+
+            /* Two blog posts side-by-side */
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        /* Blog Posts */
+        .post {
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .post h2 {
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+
+            background-color: #333;
+            color: white;
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+
+            .blog-container {
+                grid-template-columns: 1fr;
+
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blog-container">
+
+        <!-- Header -->
+        <header>
+            <h1>My Blog</h1>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+
+        <!-- Sidebar -->
+        <aside>
+            <h2>Categories</h2>
+
+            <ul>
+                <li>Technology</li>
+                <li>Programming</li>
+                <li>Web Development</li>
+                <li>Artificial Intelligence</li>
+                <li>Travel</li>
+            </ul>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <article class="post">
+                <h2>Learning Web Development</h2>
+
+                <p>
+                    Web development is an exciting field that allows
+                    us to create websites and web applications.
+                </p>
+
+                <p>
+                    HTML, CSS and JavaScript are the basic technologies
+                    used to build modern websites.
+                </p>
+            </article>
+
+
+            <article class="post">
+                <h2>Introduction to CSS Grid</h2>
+
+                <p>
+                    CSS Grid is a powerful layout system that makes
+                    it easy to create rows and columns.
+                </p>
+
+                <p>
+                    It is especially useful for creating responsive
+                    webpage layouts.
+                </p>
+            </article>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            Contact: workwithvanshikaer@gmail.com | © 2026 My Blog
+        </footer>
+
+    </div>
+
+</body>
+</html>
+```

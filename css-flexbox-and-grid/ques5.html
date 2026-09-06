@@ -1,0 +1,174 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing Plans</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        /* Pricing Container */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        /* Pricing Cards */
+        .card {
+            width: 280px;
+            min-height: 350px;
+
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.3s;
+
+            /* Fade-in animation */
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Middle Card */
+        .card.middle {
+            transform: scale(1.08);
+            background-color: #dbeafe;
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Middle card hover */
+        .card.middle:hover {
+            transform: scale(1.08) translateY(-10px);
+        }
+
+        /* Price */
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* Button */
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 750px) {
+
+            .pricing-container {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 90%;
+                max-width: 350px;
+            }
+
+            .card.middle {
+                transform: none;
+            }
+
+            .card.middle:hover {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Choose Your Plan</h1>
+
+    <div class="pricing-container">
+
+        <!-- Basic Plan -->
+        <div class="card">
+            <h2>Basic</h2>
+
+            <p class="price">₹499</p>
+
+            <p>5 Projects</p>
+            <p>10 GB Storage</p>
+            <p>Email Support</p>
+
+            <button>Choose Plan</button>
+        </div>
+
+
+        <!-- Premium Plan -->
+        <div class="card middle">
+            <h2>Premium</h2>
+
+            <p class="price">₹999</p>
+
+            <p>20 Projects</p>
+            <p>50 GB Storage</p>
+            <p>Priority Support</p>
+
+            <button>Choose Plan</button>
+        </div>
+
+
+        <!-- Pro Plan -->
+        <div class="card">
+            <h2>Pro</h2>
+
+            <p class="price">₹1499</p>
+
+            <p>Unlimited Projects</p>
+            <p>100 GB Storage</p>
+            <p>24/7 Support</p>
+
+            <button>Choose Plan</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
