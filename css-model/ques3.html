@@ -1,0 +1,124 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 70px;
+            padding-bottom: 60px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #222;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            color: white;
+        }
+
+        .linear {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background-attachment: fixed;
+        }
+
+        .radial {
+            background: radial-gradient(circle, #ff9966, #ff5e62, #8e2de2);
+        }
+
+        .content {
+            max-width: 700px;
+        }
+
+        .content h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gradient Background Page</h1>
+    </header>
+
+    <section class="linear">
+        <div class="content">
+            <h2>Linear Gradient</h2>
+            <p>
+                This section uses a linear gradient background.
+                The colors gradually change from one direction to another.
+                The background-attachment property is fixed to create
+                a parallax-like scrolling effect.
+            </p>
+        </div>
+    </section>
+
+    <section class="radial">
+        <div class="content">
+            <h2>Radial Gradient</h2>
+            <p>
+                This section uses a radial gradient background.
+                The colors spread outward from a central point,
+                creating a circular gradient effect.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>CSS Assignment - Gradient Background</p>
+    </footer>
+
+</body>
+</html>
+

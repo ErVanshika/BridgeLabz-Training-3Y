@@ -1,0 +1,111 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Depth Effect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            color: #333;
+            text-shadow: 3px 3px 5px #aaa;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 30px;
+            background-color: white;
+            text-align: center;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+
+        .card1 {
+            box-shadow: 5px 5px 15px #aaa;
+        }
+
+        .card2 {
+            box-shadow: 0 10px 20px #999;
+        }
+
+        .card3 {
+            box-shadow: 10px 10px 0 #ccc;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 35px #888;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #333;
+            text-shadow: 2px 2px 4px #aaa;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Profiles</h1>
+
+    <div class="container">
+
+        <div class="card card1">
+            <h2>Alex</h2>
+            <p>
+                Frontend Developer who creates
+                modern and responsive websites.
+            </p>
+        </div>
+
+        <div class="card card2">
+            <h2>Sarah</h2>
+            <p>
+                UI/UX Designer focused on creating
+                beautiful user experiences.
+            </p>
+        </div>
+
+        <div class="card card3">
+            <h2>John</h2>
+            <p>
+                Backend Developer who builds
+                reliable applications.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+
+    <style>
+        /* Attribute selector */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+
+        /* Attribute selector */
+        a[href^="https"] {
+            color: green;
+        }
+
+        /* Pseudo-class: hover */
+        a:hover {
+            color: red;
+        }
+
+        /* Pseudo-class: focus */
+        input:focus {
+            border-color: blue;
+            outline: none;
+            background-color: #eaf3ff;
+        }
+
+        /* Pseudo-class: nth-child */
+        li:nth-child(odd) {
+            background-color: #eeeeee;
+        }
+
+        li:nth-child(even) {
+            background-color: #d6eaff;
+        }
+
+        .items {
+            list-style: none;
+            width: 400px;
+            padding: 0;
+        }
+
+        .items li {
+            padding: 15px;
+            margin: 5px 0;
+        }
+
+        /* Pseudo-element: before */
+        .items li::before {
+            content: "✓ ";
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Pseudo-element: after */
+        .items li::after {
+            content: " →";
+            color: purple;
+        }
+
+        /* Child combinator */
+        .menu > li {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* Adjacent sibling combinator */
+        h2 + p {
+            color: orange;
+        }
+
+        /* General sibling combinator */
+        h2 ~ ul {
+            border-left: 4px solid purple;
+            padding-left: 25px;
+        }
+
+        /* Descendant combinator */
+        .description p {
+            color: brown;
+            font-style: italic;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .menu {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Advanced CSS Selectors</h1>
+
+        <h2>Attribute Selectors</h2>
+
+        <input type="text" placeholder="Enter your name">
+
+        <p>
+            Visit
+            <a href="https://www.google.com">Google</a>
+        </p>
+
+        <h2>List Items</h2>
+
+        <ul class="items">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+
+        <h2>Combinators</h2>
+
+        <p>This paragraph is selected using the adjacent sibling combinator.</p>
+
+        <ul class="menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+
+        <div class="description">
+            <p>This paragraph is styled using the descendant combinator.</p>
+        </div>
+
+        <ul>
+            <li>Web Development</li>
+            <li>App Development</li>
+        </ul>
+
+    </div>
+
+</body>
+</html>
+```

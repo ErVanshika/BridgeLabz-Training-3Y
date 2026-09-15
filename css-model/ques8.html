@@ -1,0 +1,298 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 900px;
+            max-width: 100%;
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .intro {
+            color: #666;
+            margin-bottom: 35px;
+            font-size: 17px;
+        }
+
+        .box-model {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .margin-layer {
+            background-color: #ffd6a5;
+            padding: 35px;
+            outline: 3px dashed #e76f00;
+        }
+
+        .border-layer {
+            background-color: #bde0fe;
+            border: 15px solid #457b9d;
+            padding: 30px;
+        }
+
+        .padding-layer {
+            background-color: #caffbf;
+            padding: 30px;
+        }
+
+        .content-layer {
+            background-color: #ffadad;
+            width: 230px;
+            padding: 25px;
+        }
+
+        .content-layer h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content-layer p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .layer-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .comparison {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .comparison-box {
+            width: 330px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #fafafa;
+            border: 2px solid #ddd;
+        }
+
+        .comparison-box h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .default-box {
+            width: 200px;
+            padding: 20px;
+            border: 10px solid #e76f51;
+            margin: 15px auto;
+            background-color: #ffe5d9;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            width: 200px;
+            padding: 20px;
+            border: 10px solid #2a9d8f;
+            margin: 15px auto;
+            background-color: #d8f3dc;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .labels {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .label {
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .margin-label {
+            background-color: #ffd6a5;
+        }
+
+        .border-label {
+            background-color: #bde0fe;
+        }
+
+        .padding-label {
+            background-color: #caffbf;
+        }
+
+        .content-label {
+            background-color: #ffadad;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .margin-layer {
+                padding: 20px;
+            }
+
+            .border-layer {
+                padding: 20px;
+            }
+
+            .padding-layer {
+                padding: 20px;
+            }
+
+            .content-layer {
+                width: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Box Model Exploration</h1>
+
+        <p class="intro">
+            Every HTML element is treated as a box made up of content,
+            padding, border, and margin.
+        </p>
+
+        <div class="box-model">
+
+            <div class="margin-layer">
+
+                <div class="layer-name">MARGIN</div>
+
+                <div class="border-layer">
+
+                    <div class="layer-name">BORDER</div>
+
+                    <div class="padding-layer">
+
+                        <div class="layer-name">PADDING</div>
+
+                        <div class="content-layer">
+
+                            <h2>CONTENT</h2>
+
+                            <p>
+                                This is the actual content area of the element.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="labels">
+            <div class="label margin-label">
+                Margin: Space outside the border
+            </div>
+
+            <div class="label border-label">
+                Border: Edge around the element
+            </div>
+
+            <div class="label padding-label">
+                Padding: Space around content
+            </div>
+
+            <div class="label content-label">
+                Content: Actual text or elements
+            </div>
+        </div>
+
+        <div class="comparison">
+
+            <div class="comparison-box">
+
+                <h2>Default Box Model</h2>
+
+                <div class="default-box">
+                    Content Box
+                </div>
+
+                <p class="description">
+                    The default value is
+                    <strong>box-sizing: content-box</strong>.
+                    The width does not include padding and border.
+                </p>
+
+            </div>
+
+            <div class="comparison-box">
+
+                <h2>Border Box Model</h2>
+
+                <div class="border-box">
+                    Border Box
+                </div>
+
+                <p class="description">
+                    With
+                    <strong>box-sizing: border-box</strong>,
+                    the declared width includes both padding and border.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
