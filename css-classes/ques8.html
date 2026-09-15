@@ -1,0 +1,207 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Comparison</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #dbeafe, #fce7f3);
+        }
+
+        .container {
+            width: 900px;
+            max-width: 100%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .comparison {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+        }
+
+        .box-container {
+            width: 300px;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .box-container h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .box {
+            width: 220px;
+            height: 180px;
+            padding: 30px;
+            border: 10px solid;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .default-container {
+            background-color: #fee2e2;
+            border: 2px solid #ef4444;
+        }
+
+        .default-box {
+            box-sizing: content-box;
+            background-color: #fecaca;
+            border-color: #dc2626;
+        }
+
+        .border-container {
+            background-color: #dcfce7;
+            border: 2px solid #16a34a;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            background-color: #bbf7d0;
+            border-color: #15803d;
+        }
+
+        .box-container p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .total-size {
+            margin-top: 30px;
+            padding: 18px;
+            background-color: #f3f4f6;
+            border-radius: 10px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 25px;
+            }
+
+            .comparison {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box-container {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            body {
+                padding: 15px;
+            }
+
+            .box {
+                width: 180px;
+                height: 160px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Box-Sizing Comparison</h1>
+
+        <p class="intro">
+            Both boxes have the same width, padding, and border.
+            The difference is how CSS calculates their total size.
+        </p>
+
+        <div class="comparison">
+
+            <div class="box-container default-container">
+
+                <h2>Default Box</h2>
+
+                <div class="box default-box">
+                    content-box
+                </div>
+
+                <p>
+                    With <strong>content-box</strong>, the declared width
+                    applies only to the content. Padding and border are
+                    added to the total size.
+                </p>
+
+            </div>
+
+            <div class="box-container border-container">
+
+                <h2>Border Box</h2>
+
+                <div class="box border-box">
+                    border-box
+                </div>
+
+                <p>
+                    With <strong>border-box</strong>, the declared width
+                    already includes the content, padding, and border.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="total-size">
+            <span class="highlight">Key Difference:</span>
+            With <strong>content-box</strong>, padding and border increase
+            the total size. With <strong>border-box</strong>, they remain
+            inside the declared width and height.
+        </div>
+
+    </div>
+
+</body>
+</html>
+

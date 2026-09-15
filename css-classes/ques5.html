@@ -1,0 +1,175 @@
+html id="k5x2q9"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Button Collection</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 800px;
+            max-width: 100%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .primary {
+            background-color: #4f46e5;
+            color: white;
+            border: 2px solid #4f46e5;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+        }
+
+        .primary:hover {
+            background-color: #3730a3;
+            transform: translateY(-3px);
+        }
+
+        .primary:active {
+            transform: scale(0.95);
+        }
+
+        .secondary {
+            background-color: #16a34a;
+            color: white;
+            border: 2px solid #16a34a;
+            box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+        }
+
+        .secondary:hover {
+            background-color: #15803d;
+            transform: translateY(-3px);
+        }
+
+        .secondary:active {
+            transform: scale(0.95);
+        }
+
+        .outline {
+            background-color: transparent;
+            color: #dc2626;
+            border: 2px solid #dc2626;
+        }
+
+        .outline:hover {
+            background-color: #dc2626;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .outline:active {
+            transform: scale(0.95);
+        }
+
+        button:focus {
+            outline: 3px solid #f59e0b;
+            outline-offset: 4px;
+        }
+
+        button:disabled {
+            background-color: #d1d5db;
+            color: #6b7280;
+            border-color: #d1d5db;
+            box-shadow: none;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .info {
+            margin-top: 35px;
+            padding: 15px;
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Styled Button Collection</h1>
+
+        <p class="description">
+            Different button styles using CSS pseudo-classes and transitions.
+        </p>
+
+        <div class="buttons">
+
+            <button class="primary">
+                Primary
+            </button>
+
+            <button class="secondary">
+                Secondary
+            </button>
+
+            <button class="outline">
+                Outline
+            </button>
+
+            <button disabled>
+                Disabled
+            </button>
+
+        </div>
+
+        <div class="info">
+            Hover over the buttons, click them to see the active effect,
+            and use Tab to see the focus effect.
+        </div>
+
+    </div>
+
+</body>
+</html>
+

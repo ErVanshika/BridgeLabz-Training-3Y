@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .box {
+            width: 230px;
+            min-height: 250px;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .hover-link {
+            display: inline-block;
+            padding: 10px 18px;
+            color: white;
+            background-color: #2563eb;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .hover-link:hover {
+            background-color: #dc2626;
+            color: yellow;
+        }
+
+        .focus-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .focus-input:focus {
+            outline: none;
+            border-color: #16a34a;
+            background-color: #dcfce7;
+        }
+
+        .active-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #7c3aed;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .active-button:active {
+            background-color: #dc2626;
+            transform: scale(0.9);
+        }
+
+        .items {
+            list-style: none;
+        }
+
+        .items li {
+            padding: 9px;
+            margin-bottom: 7px;
+            background-color: #e5e7eb;
+            border-radius: 5px;
+        }
+
+        .items li:nth-child(2) {
+            background-color: #f59e0b;
+            color: white;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1000px) {
+            .container {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo-Classes</h1>
+
+    <p class="intro">
+        Examples of hover, focus, active and nth-child pseudo-classes
+    </p>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>:hover</h2>
+            <p>
+                The hover pseudo-class changes an element when the mouse
+                pointer moves over it.
+            </p>
+            <a href="#" class="hover-link">Hover Me</a>
+        </div>
+
+        <div class="box">
+            <h2>:focus</h2>
+            <p>
+                The focus pseudo-class applies styling when an input field
+                is selected.
+            </p>
+            <input
+                type="text"
+                class="focus-input"
+                placeholder="Click here"
+            >
+        </div>
+
+        <div class="box">
+            <h2>:active</h2>
+            <p>
+                The active pseudo-class applies styling while a button
+                is being clicked.
+            </p>
+            <button class="active-button">Click Me</button>
+        </div>
+
+        <div class="box">
+            <h2>:nth-child()</h2>
+            <p>
+                The nth-child pseudo-class selects an element based on
+                its position.
+            </p>
+
+            <ul class="items">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

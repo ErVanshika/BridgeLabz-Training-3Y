@@ -1,0 +1,216 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined CSS Effects</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #dbeafe, #f3e8ff, #fce7f3);
+        }
+
+        .container {
+            width: 1000px;
+            max-width: 100%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .examples {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            min-height: 230px;
+            padding: 30px 20px;
+            background-color: #f8fafc;
+            border: 2px solid #e5e7eb;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+            border-color: #6366f1;
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .effect-button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .grow {
+            background-color: #4f46e5;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+        }
+
+        .grow:hover {
+            background-color: #3730a3;
+            transform: scale(1.1);
+            box-shadow: 0 7px 16px rgba(79, 70, 229, 0.4);
+        }
+
+        .move {
+            background-color: #16a34a;
+            box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+        }
+
+        .move:hover {
+            background-color: #15803d;
+            transform: translateY(-6px);
+            box-shadow: 0 7px 16px rgba(22, 163, 74, 0.4);
+        }
+
+        .rotate {
+            background-color: #dc2626;
+            box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+        }
+
+        .rotate:hover {
+            background-color: #b91c1c;
+            transform: rotate(-4deg) scale(1.05);
+            box-shadow: 0 7px 16px rgba(220, 38, 38, 0.4);
+        }
+
+        .effect-button:focus {
+            outline: 3px solid #f59e0b;
+            outline-offset: 4px;
+        }
+
+        .effect-button:active {
+            transform: scale(0.95);
+        }
+
+        .footer-text {
+            margin-top: 35px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 750px) {
+            .examples {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Combined CSS Effects</h1>
+
+        <p class="intro">
+            Hover over the buttons and cards to see pseudo-classes,
+            transitions, transformations, and shadows working together.
+        </p>
+
+        <div class="examples">
+
+            <div class="card">
+                <h2>Grow Effect</h2>
+
+                <p>
+                    The button grows slightly and changes its color
+                    when you hover over it.
+                </p>
+
+                <button class="effect-button grow">
+                    Hover Me
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>Move Effect</h2>
+
+                <p>
+                    The button moves upward smoothly while its
+                    background and shadow change.
+                </p>
+
+                <button class="effect-button move">
+                    Hover Me
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>Rotate Effect</h2>
+
+                <p>
+                    The button rotates slightly and grows when
+                    the mouse pointer moves over it.
+                </p>
+
+                <button class="effect-button rotate">
+                    Hover Me
+                </button>
+            </div>
+
+        </div>
+
+        <p class="footer-text">
+            CSS Pseudo-Classes + Transitions + Transformations
+        </p>
+
+    </div>
+
+</body>
+</html>
+
