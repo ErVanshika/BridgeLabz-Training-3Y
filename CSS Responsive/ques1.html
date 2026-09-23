@@ -1,0 +1,141 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Filter Gallery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: filter 0.5s ease;
+        }
+
+        .gallery-item p {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .gallery-item:nth-child(1) img {
+            filter: blur(3px);
+        }
+
+        .gallery-item:nth-child(2) img {
+            filter: grayscale(100%);
+        }
+
+        .gallery-item:nth-child(3) img {
+            filter: sepia(100%);
+        }
+
+        .gallery-item:nth-child(4) img {
+            filter: brightness(150%);
+        }
+
+        .gallery-item:nth-child(5) img {
+            filter: contrast(180%);
+        }
+
+        .gallery-item:nth-child(6) img {
+            filter: hue-rotate(90deg);
+        }
+
+        .gallery-item img:hover {
+            filter: none;
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 15px;
+            }
+
+            .gallery-item img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Image Filter Gallery</h1>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Mountain">
+            <p>Blur Filter</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
+            <p>Grayscale Filter</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b" alt="Forest">
+            <p>Sepia Filter</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df" alt="City">
+            <p>Brightness Filter</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" alt="Lake">
+            <p>Contrast Filter</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1472120435266-53107fd0c44a" alt="Sunset">
+            <p>Hue Rotate Filter</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

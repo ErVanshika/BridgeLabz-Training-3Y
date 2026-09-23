@@ -1,0 +1,114 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 25px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            flex: 1;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease;
+        }
+
+        .card:hover {
+            background-color: #87ceeb;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .card-container {
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 0 0 calc(50% - 12.5px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card-container {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Cards</h1>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>
+                Learn the basic structure of web pages
+                using HTML elements and tags.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>
+                Design beautiful and responsive websites
+                using CSS properties and layouts.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>
+                Add interaction and dynamic behavior
+                to your web pages using JavaScript.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Responsive Design</h2>
+            <p>
+                Create websites that work properly
+```
