@@ -1,0 +1,214 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanshika Sharma - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #20242a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10vh;
+            background-color: #18222d;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 2em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #63e6be;
+        }
+
+        main {
+            flex: 1;
+            min-height: 80vh;
+            padding: 15vh 8% 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5%;
+            background-color: white;
+            padding: 5%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .bio {
+            width: 60%;
+        }
+
+        .bio h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #18222d;
+        }
+
+        .bio p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5em;
+        }
+
+        .profile-image {
+            width: 30%;
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 100%;
+            max-width: 250px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #63e6be;
+        }
+
+        footer {
+            height: 10vh;
+            min-height: 70px;
+            background-color: #18222d;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                height: auto;
+                min-height: 80px;
+                padding: 15px 5%;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                gap: 1em;
+            }
+
+            main {
+                padding-top: 160px;
+            }
+
+            .portfolio {
+                flex-direction: column-reverse;
+                width: 100%;
+                padding: 8%;
+            }
+
+            .bio {
+                width: 100%;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 50%;
+            }
+
+            .bio h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">Vanshika Sharma</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="portfolio">
+
+            <div class="bio">
+
+                <h1>Hello, I'm Vanshika</h1>
+
+                <p>
+                    I am a B.Tech student interested in web development,
+                    programming, artificial intelligence, and technology.
+                    I enjoy learning new skills and creating useful and
+                    creative projects.
+                </p>
+
+            </div>
+
+            <div class="profile-image">
+                <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                    alt="Profile Image">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 Vanshika Sharma. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
+```
