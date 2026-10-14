@@ -1,0 +1,49 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academic Performance Evaluator</title>
+</head>
+<body>
+
+    <h2>Academic Performance Evaluator</h2>
+
+    <script>
+        let marks = [90, 85, 78, 92, 88];
+
+        let total = 0;
+        let detained = false;
+
+        for (let i = 0; i < marks.length; i++) {
+            total += marks[i];
+
+            if (marks[i] < 35) {
+                detained = true;
+            }
+        }
+
+        let average = total / marks.length;
+        let percentage = (total / 500) * 100;
+
+        let result;
+
+        if (detained || percentage < 50) {
+            result = "Detained";
+        }
+        else if (percentage >= 85) {
+            result = "Promoted with Distinction";
+        }
+        else if (percentage >= 50 && percentage < 85) {
+            result = "Promoted";
+        }
+
+        document.write("Marks: " + marks.join(", ") + "<br>");
+        document.write("Total Marks: " + total + " / 500<br>");
+        document.write("Average: " + average.toFixed(2) + "<br>");
+        document.write("Percentage: " + percentage.toFixed(2) + "%<br>");
+        document.write("<h3>Result: " + result + "</h3>");
+    </script>
+
+</body>
+</html>
+```

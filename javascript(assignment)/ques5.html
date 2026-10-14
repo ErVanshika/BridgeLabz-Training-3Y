@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Activity Planner</title>
+</head>
+<body>
+
+    <h2>Weather Activity Planner</h2>
+
+    <script>
+        let temperature = 10;
+        let isRaining = false;
+        let windSpeed = 25;
+
+        let activity;
+
+        if (isRaining) {
+            activity = "Stay indoors with hot coffee.";
+        }
+        else if (temperature > 35) {
+            activity = "Go swimming.";
+        }
+        else if (temperature < 15 && windSpeed > 20) {
+            activity = "Too cold and windy — stay home.";
+        }
+        else {
+            activity = "Perfect day for a walk.";
+        }
+
+        document.write("Temperature: " + temperature + "°C<br>");
+        document.write("Is it raining? " + isRaining + "<br>");
+        document.write("Wind Speed: " + windSpeed + " km/h<br>");
+        document.write("<h3>" + activity + "</h3>");
+    </script>
+
+</body>
+</html>
+```

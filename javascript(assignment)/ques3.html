@@ -1,0 +1,33 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Expense Tracker</title>
+</head>
+<body>
+
+    <h2>Monthly Expense Tracker</h2>
+
+    <script>
+        let expenses = [3000, 1000, 5000, 1500, 800];
+
+        let total = 0;
+
+        for (let i = 0; i < expenses.length; i++) {
+            total += expenses[i];
+        }
+
+        let average = total / expenses.length;
+
+        let tax = total * 0.10;
+        total += tax;
+
+        document.write("Total Expenses: ₹" + (total - tax).toFixed(2) + "<br>");
+        document.write("Average Expenses: ₹" + average.toFixed(2) + "<br>");
+        document.write("Tax (10%): ₹" + tax.toFixed(2) + "<br>");
+        document.write("Final Amount After Tax: ₹" + total.toFixed(2));
+    </script>
+
+</body>
+</html>
+```

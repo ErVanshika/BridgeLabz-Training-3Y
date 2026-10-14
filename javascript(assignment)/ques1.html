@@ -1,0 +1,37 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Greeting</title>
+</head>
+<body>
+
+    <h2>Personalized Login Greeting</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="greetUser()">Login</button>
+
+    <h3 id="message"></h3>
+
+    <script>
+        function greetUser() {
+            let userName = document.getElementById("name").value;
+            let currentHour = new Date().getHours();
+
+            if (currentHour < 12) {
+                document.getElementById("message").innerText =
+                    `Good Morning ${userName}!`;
+            }
+            else if (currentHour <= 17) {
+                document.getElementById("message").innerText =
+                    `Good Afternoon ${userName}!`;
+            }
+            else {
+                document.getElementById("message").innerText =
+                    `Good Evening ${userName}!`;
+            }
+        }
+    </script>
+
+</body>
+</html>
