@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Logic Access System</title>
+</head>
+<body>
+    <h2>Smart Home Security System</h2>
+
+    <button onclick="checkSecurity()">Check Security</button>
+
+    <p id="result"></p>
+
+    <script>
+        let isDoorLocked = true;
+        let isWindowClosed = true;
+        let isAlarmOn = true;
+        let isOwnerInside = true;
+
+        function checkSecurity() {
+            let isSecure = isAlarmOn &&
+                           isDoorLocked &&
+                           isWindowClosed &&
+                           isOwnerInside;
+
+            if (isSecure) {
+                document.getElementById("result").innerHTML =
+                    "Status: Secure";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Status: Unsafe";
+            }
+
+            console.log("Door Locked:", isDoorLocked);
+            console.log("Window Closed:", isWindowClosed);
+            console.log("Alarm On:", isAlarmOn);
+            console.log("Owner Inside:", isOwnerInside);
+            console.log("Security Status:", isSecure ? "Secure" : "Unsafe");
+        }
+    </script>
+</body>
+</html>

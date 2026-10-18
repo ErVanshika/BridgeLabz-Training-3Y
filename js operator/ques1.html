@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Conflict Resolver</title>
+</head>
+<body>
+    <h2>Scope Conflict Resolver</h2>
+
+    <button onclick="calculateSalary(true)">Permanent Employee</button>
+    <button onclick="calculateSalary(false)">Temporary Employee</button>
+
+    <p id="result"></p>
+
+    <script>
+        let bonus = 5000;
+
+        function calculateSalary(isPermanent) {
+            let salary = 40000;
+            let totalSalary = salary;
+
+            if (isPermanent === true) {
+                totalSalary = salary + bonus;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Is Permanent: " + isPermanent +
+                "<br>Basic Salary: ₹" + salary +
+                "<br>Global Bonus: ₹" + bonus +
+                "<br>Total Salary: ₹" + totalSalary;
+
+            console.log("Is Permanent:", isPermanent);
+            console.log("Total Salary:", totalSalary);
+            console.log("Global Bonus:", bonus);
+        }
+    </script>
+</body>
+</html>

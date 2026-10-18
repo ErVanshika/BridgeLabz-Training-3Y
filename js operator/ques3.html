@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Utility Dashboard</title>
+</head>
+<body>
+    <h2>Math Utility Dashboard</h2>
+
+    <button onclick="calculateMath()">Calculate Results</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateMath() {
+            let x = 16.75;
+
+            let roundedValue = Math.round(x);
+            let squareRoot = Math.sqrt(x);
+            let power = Math.pow(x, 3);
+            let randomNumber = Math.floor(Math.random() * 41) + 10;
+
+            let summary = `
+                <h3>Math Results</h3>
+                Number: ${x}<br>
+                Rounded Value: ${roundedValue}<br>
+                Square Root: ${squareRoot.toFixed(2)}<br>
+                Power (x³): ${power.toFixed(3)}<br>
+                Random Number (10-50): ${randomNumber}
+            `;
+
+            document.getElementById("result").innerHTML = summary;
+
+            console.log(summary);
+        }
+    </script>
+</body>
+</html>

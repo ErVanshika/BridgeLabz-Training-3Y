@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Performance Analyzer</title>
+</head>
+<body>
+    <h2>Array Performance Analyzer</h2>
+
+    <button onclick="analyzePerformance()">Analyze Scores</button>
+
+    <div id="result"></div>
+
+    <script>
+        function analyzePerformance() {
+            let scores = Array.from({ length: 8 }, () =>
+                Math.floor(Math.random() * 71) + 30
+            );
+
+            let highest = Math.max(...scores);
+            let lowest = Math.min(...scores);
+
+            let total = scores.reduce((sum, score) => sum + score, 0);
+            let average = total / scores.length;
+
+            let passedStudents = scores.filter(score => score >= 50);
+            let failedStudents = scores.filter(score => score < 50);
+
+            let formattedScores = scores.map(score => score + " marks");
+
+            let summary = `
+                <h3>Performance Summary</h3>
+                <p><b>Student Scores:</b> ${formattedScores.join(", ")}</p>
+                <p><b>Highest Score:</b> ${highest}</p>
+                <p><b>Lowest Score:</b> ${lowest}</p>
+                <p><b>Average Score:</b> ${average.toFixed(2)}</p>
+                <p><b>Students Passed:</b> ${passedStudents.length} out of ${scores.length}</p>
+                <p><b>Students Failed:</b> ${failedStudents.length}</p>
+            `;
+
+            document.getElementById("result").innerHTML = summary;
+
+            console.log("Scores:", scores);
+            console.log("Highest Score:", highest);
+            console.log("Lowest Score:", lowest);
+            console.log("Average Score:", average);
+            console.log("Passed Students:", passedStudents);
+            console.log("Failed Students:", failedStudents);
+        }
+    </script>
+</body>
+</html>
