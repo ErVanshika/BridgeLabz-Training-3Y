@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Data Parser</title>
+</head>
+<body>
+    <h2>Dynamic Data Parser</h2>
+    <pre id="output"></pre>
+
+    <script>
+        const apiData = ["25", "true", "false", "NaN", " ", "100px", "3.14", null, undefined];
+
+        let validNumbers = [];
+        let invalidNumbers = [];
+        let report = "";
+
+        for (let value of apiData) {
+            let num = Number(value);
+            let bool = Boolean(value);
+            let str = String(value);
+
+            report += "Original Value: " + str + "\n";
+            report += "Number: " + num + "\n";
+            report += "Boolean: " + bool + "\n";
+            report += "String: " + str + "\n";
+
+            if (str.trim() === "" || value === undefined || Number.isNaN(num) || str === "NaN" || str === "100px") {
+                invalidNumbers.push(value);
+                report += "Status: Invalid Number\n";
+            } else {
+                validNumbers.push(num);
+                report += "Status: Valid Number\n";
+            }
+
+            report += "------------------------\n";
+        }
+
+        report += "\nValid Numeric Data: " + JSON.stringify(validNumbers);
+        report += "\nInvalid Data: " + JSON.stringify(invalidNumbers);
+
+        document.getElementById("output").textContent = report;
+        console.log("Valid Numeric Data:", validNumbers);
+        console.log("Invalid Data:", invalidNumbers);
+    </script>
+</body>
+</html>

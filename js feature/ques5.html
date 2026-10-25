@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hoisting Lab</title>
+</head>
+<body>
+    <h2>Hoisting Lab: The Sequence Trap</h2>
+    <pre id="output"></pre>
+
+    <script>
+        "use strict";
+
+        let output = "";
+
+        let score = 50;
+
+        function announce() {
+            output += "Game started\n";
+        }
+
+        let status = "ready";
+
+        function startGame() {
+            output += status + "\n";
+        }
+
+        output += "Score: " + score + "\n";
+        announce();
+        startGame();
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>
